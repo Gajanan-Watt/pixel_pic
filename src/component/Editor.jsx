@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Editor.css";
-import { CirclePicker } from "react-color";
+// import { CirclePicker } from "react-color";
+import {SwatchesPicker} from "react-color";
 import {DrawingPanel} from "./DrawingPanel";
 
 export const Editor = () => {
@@ -58,9 +59,10 @@ export const Editor = () => {
       <button onClick={initializeDrawingPanel} className="button">
         {buttonText}
       </button>
-
+      
       {hideOptions && (
-        <CirclePicker color={selectedColor} onChangeComplete={changeColor} />
+        // <CirclePicker color={selectedColor} onChangeComplete={changeColor} />
+        <SwatchesPicker color={selectedColor} onChangeComplete={changeColor} />
       )}
     <br />
       {hideOptions && (
